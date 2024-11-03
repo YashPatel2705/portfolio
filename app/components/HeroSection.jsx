@@ -23,7 +23,7 @@ export default function HeroSection() {
 
       <div className="relative z-20 mt-8 md:mt-0 md:ml-12">
         <Image
-          src="/images/p1.png"  
+          src="/images/P1.png"  
           alt="Profile Image"
           width={250}                 
           height={200}                
