@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Eurostile SC Bold';
+  src: url('/fonts/EurostileLTStd-Bold.woff') format('woff'); 
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Eurostile SC Bold', Arial, sans-serif;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+button {
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+}
+
+button:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+}
+
+.button2 {
+  transition: all 0.3s ease-in-out;
+}
+
+.button2:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 rgb(255, 62, 62)
+  ; 
+}
+
+.button2:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 rgb(255, 62, 62)
+  ; 
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 20s linear infinite;
+}
+
+.headings {
+  font-size: 18px;
+  color: #b3b3b3;
+  font-family: inherit;
+  font-weight: 900;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition: color 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.headings:focus,
+.headings:hover {
+  color: #000000;
+}
+
+.headings:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #000000;
+  transition: width 400ms cubic-bezier(0.25, 0.8, 0.25, 1), left 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.headings:focus:after,
+.headings:hover:after {
+  width: 100%;
+  left: 0%;
+}
